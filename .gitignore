@@ -2,3 +2,14 @@
 /ProIntro/assets/target/
 /ProIntro/java/target/
 /ProGames/assets/target/
+*.class
+
+ProGames/core/target/classes/rebel.xml
+
+ProGames/core/target/maven-archiver/pom.properties
+
+*.jar
+
+ProGames/java/target/classes/rebel.xml
+
+ProGames/java/target/maven-archiver/pom.properties
