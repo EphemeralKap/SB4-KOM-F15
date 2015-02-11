@@ -13,3 +13,27 @@ ProGames/core/target/maven-archiver/pom.properties
 ProGames/java/target/classes/rebel.xml
 
 ProGames/java/target/maven-archiver/pom.properties
+
+ProGames/rebel.xml
+
+ProGames/assets/.classpath
+
+ProGames/assets/.project
+
+ProGames/assets/.settings/org.eclipse.core.resources.prefs
+
+ProGames/assets/.settings/org.eclipse.jdt.core.prefs
+
+ProGames/assets/.settings/org.eclipse.m2e.core.prefs
+
+ProGames/core/src/main/resources/rebel.xml
+
+ProGames/java/.classpath
+
+ProGames/java/.project
+
+ProGames/java/.settings/org.eclipse.core.resources.prefs
+
+ProGames/java/.settings/org.eclipse.jdt.core.prefs
+
+ProGames/java/.settings/org.eclipse.m2e.core.prefs
