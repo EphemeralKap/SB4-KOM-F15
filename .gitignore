@@ -37,3 +37,10 @@ ProGames/java/.settings/org.eclipse.core.resources.prefs
 ProGames/java/.settings/org.eclipse.jdt.core.prefs
 
 ProGames/java/.settings/org.eclipse.m2e.core.prefs
+/ProJava/java/target/
+/ProJava/common/target/
+/ProJava/com.decouplink/target/
+/ProJava/movesystem/target/
+/ProJava/assets/target/
+/ProJava/core/target/
+/ProJava/enemy/target/

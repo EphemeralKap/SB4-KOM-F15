@@ -7,4 +7,11 @@
     </parent>
     <artifactId>common</artifactId>
     <name>Common</name>
+    <dependencies>
+        <dependency>
+            <groupId>com.decouplink</groupId>
+            <artifactId>decouplink</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 </project>

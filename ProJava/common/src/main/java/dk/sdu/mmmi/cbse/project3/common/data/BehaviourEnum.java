@@ -1,5 +1,6 @@
 package dk.sdu.mmmi.cbse.project3.common.data;
 
 public enum BehaviourEnum {
-	RANDOM_MOVEMENT;
+
+    SHOOT, HIT, MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT;
 }

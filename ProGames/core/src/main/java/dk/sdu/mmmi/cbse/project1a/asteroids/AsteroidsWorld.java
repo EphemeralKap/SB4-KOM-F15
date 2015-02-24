@@ -33,12 +33,12 @@ public class AsteroidsWorld extends EntityListenerAdapter {
 
         for (int i = 0; i < entities.size(); i++) {
             for (int j = i + 1; j < entities.size(); j++) {
-                IEntity entity = entities.get(i);
+                IEntity source = entities.get(i);
                 IEntity target = entities.get(j);
 
-                if (target != null && testCollision(entity, target)) {
-                    target.onHurt(new Events.HurtEvent(entity, target));
-                    entity.onHurt(new Events.HurtEvent(target, entity));
+                if (target != null && testCollision(source, target)) {
+                    target.onHurt(new Events.HurtEvent(source, target));
+                    source.onHurt(new Events.HurtEvent(target, source));
                 }
             }
         }
@@ -56,12 +56,6 @@ public class AsteroidsWorld extends EntityListenerAdapter {
         for (IEntity e : entities) {
             e.onRender(new RenderEvent(alpha));
         }
-    }
-
-    public void addEntity(IEntity e) {
-        e.addEntityListener(this);
-        entities.add(e);
-        layer.add(e.view());
     }
 
     private boolean testCollision(IEntity source, IEntity target) {
@@ -87,7 +81,10 @@ public class AsteroidsWorld extends EntityListenerAdapter {
 
     @Override
     public void onCreate(CreateEvent createEvent) {
-        addEntity(createEvent.entity());
+        IEntity e = createEvent.entity();
+        e.addEntityListener(this);
+        entities.add(e);
+        layer.add(e.view());
     }
 
     @Override
