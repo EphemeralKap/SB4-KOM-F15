@@ -30,7 +30,6 @@
         <dependency>
             <groupId>com.decouplink</groupId>
             <artifactId>decouplink</artifactId>
-            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>dk.sdu.mmmi.cbse</groupId>

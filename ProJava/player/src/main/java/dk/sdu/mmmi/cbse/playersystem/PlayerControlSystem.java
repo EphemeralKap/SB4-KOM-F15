@@ -2,16 +2,16 @@ package dk.sdu.mmmi.cbse.playersystem;
 
 import com.decouplink.Context;
 import static com.decouplink.Utilities.context;
-import dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum;
-import static dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum.HIT;
-import dk.sdu.mmmi.cbse.project3.common.data.Entity;
-import dk.sdu.mmmi.cbse.project3.common.data.EntityType;
-import static dk.sdu.mmmi.cbse.project3.common.data.EntityType.PLAYER;
-import dk.sdu.mmmi.cbse.project3.common.data.Health;
-import dk.sdu.mmmi.cbse.project3.common.data.Rotation;
-import dk.sdu.mmmi.cbse.project3.common.data.Velocity;
-import dk.sdu.mmmi.cbse.project3.common.services.IEntityProcessingService;
-import static dk.sdu.mmmi.cbse.project3.common.utils.EntityFactoryUtil.createBullet;
+import dk.sdu.mmmi.cbse.common.data.BehaviourEnum;
+import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.HIT;
+import dk.sdu.mmmi.cbse.common.data.Entity;
+import dk.sdu.mmmi.cbse.common.data.EntityType;
+import static dk.sdu.mmmi.cbse.common.data.EntityType.PLAYER;
+import dk.sdu.mmmi.cbse.common.data.Health;
+import dk.sdu.mmmi.cbse.common.data.Rotation;
+import dk.sdu.mmmi.cbse.common.data.Velocity;
+import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
+import static dk.sdu.mmmi.cbse.common.utils.EntityFactoryUtil.createBullet;
 
 /**
  *

@@ -1,10 +1,10 @@
 package dk.sdu.mmmi.cbse.move;
 
 import static com.decouplink.Utilities.context;
-import dk.sdu.mmmi.cbse.project3.common.data.Entity;
-import dk.sdu.mmmi.cbse.project3.common.data.Position;
-import dk.sdu.mmmi.cbse.project3.common.data.Velocity;
-import dk.sdu.mmmi.cbse.project3.common.services.IEntityProcessingService;
+import dk.sdu.mmmi.cbse.common.data.Entity;
+import dk.sdu.mmmi.cbse.common.data.Position;
+import dk.sdu.mmmi.cbse.common.data.Velocity;
+import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 
 /**
  *

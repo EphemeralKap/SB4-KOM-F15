@@ -3,19 +3,19 @@ package dk.sdu.mmmi.cbse.playersystem;
 import com.decouplink.DisposableList;
 import com.decouplink.Link;
 import static com.decouplink.Utilities.context;
-import dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum;
-import static dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum.NA;
-import dk.sdu.mmmi.cbse.project3.common.data.Entity;
-import dk.sdu.mmmi.cbse.project3.common.data.EntityType;
-import static dk.sdu.mmmi.cbse.project3.common.data.EntityType.PLAYER;
-import dk.sdu.mmmi.cbse.project3.common.data.Health;
-import dk.sdu.mmmi.cbse.project3.common.data.Position;
-import dk.sdu.mmmi.cbse.project3.common.data.Radius;
-import dk.sdu.mmmi.cbse.project3.common.data.Rotation;
-import dk.sdu.mmmi.cbse.project3.common.data.Scale;
-import dk.sdu.mmmi.cbse.project3.common.data.Velocity;
-import dk.sdu.mmmi.cbse.project3.common.data.View;
-import dk.sdu.mmmi.cbse.project3.common.services.IGamePluginService;
+import dk.sdu.mmmi.cbse.common.data.BehaviourEnum;
+import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.NA;
+import dk.sdu.mmmi.cbse.common.data.Entity;
+import dk.sdu.mmmi.cbse.common.data.EntityType;
+import static dk.sdu.mmmi.cbse.common.data.EntityType.PLAYER;
+import dk.sdu.mmmi.cbse.common.data.Health;
+import dk.sdu.mmmi.cbse.common.data.Position;
+import dk.sdu.mmmi.cbse.common.data.Radius;
+import dk.sdu.mmmi.cbse.common.data.Rotation;
+import dk.sdu.mmmi.cbse.common.data.Scale;
+import dk.sdu.mmmi.cbse.common.data.Velocity;
+import dk.sdu.mmmi.cbse.common.data.View;
+import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
 
 public class EntityPlugin implements IGamePluginService {
 

@@ -1,12 +1,12 @@
 package dk.sdu.mmmi.cbse.collision;
 
 import static com.decouplink.Utilities.context;
-import dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum;
-import static dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum.HIT;
-import dk.sdu.mmmi.cbse.project3.common.data.Entity;
-import dk.sdu.mmmi.cbse.project3.common.data.Position;
-import dk.sdu.mmmi.cbse.project3.common.data.Radius;
-import dk.sdu.mmmi.cbse.project3.common.services.IEntityProcessingService;
+import dk.sdu.mmmi.cbse.common.data.BehaviourEnum;
+import static dk.sdu.mmmi.cbse.common.data.BehaviourEnum.HIT;
+import dk.sdu.mmmi.cbse.common.data.Entity;
+import dk.sdu.mmmi.cbse.common.data.Position;
+import dk.sdu.mmmi.cbse.common.data.Radius;
+import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 
 /**
  *
