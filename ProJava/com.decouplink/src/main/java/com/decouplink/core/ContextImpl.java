@@ -84,6 +84,20 @@ public class ContextImpl implements Context {
         return r;
     }
 
+    @Override
+    public <T> boolean remove(T value) {
+
+        boolean isRemoved = false;
+        for (LinkImpl<?> link : links) {
+            if (link.getDestination().equals(value)) {
+                link.dispose();
+                isRemoved = true;
+                break;
+            }
+        }
+        return isRemoved;
+    }
+
     //
     // Private.
     //

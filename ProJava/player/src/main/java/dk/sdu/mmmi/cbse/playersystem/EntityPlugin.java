@@ -3,9 +3,12 @@ package dk.sdu.mmmi.cbse.playersystem;
 import com.decouplink.DisposableList;
 import com.decouplink.Link;
 import static com.decouplink.Utilities.context;
+import dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum;
+import static dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum.NA;
 import dk.sdu.mmmi.cbse.project3.common.data.Entity;
-import dk.sdu.mmmi.cbse.project3.common.data.EntityEnum;
-import static dk.sdu.mmmi.cbse.project3.common.data.EntityEnum.PLAYER;
+import dk.sdu.mmmi.cbse.project3.common.data.EntityType;
+import static dk.sdu.mmmi.cbse.project3.common.data.EntityType.PLAYER;
+import dk.sdu.mmmi.cbse.project3.common.data.Health;
 import dk.sdu.mmmi.cbse.project3.common.data.Position;
 import dk.sdu.mmmi.cbse.project3.common.data.Radius;
 import dk.sdu.mmmi.cbse.project3.common.data.Rotation;
@@ -31,14 +34,15 @@ public class EntityPlugin implements IGamePluginService {
 
     public Entity createPlayerShip() {
         Entity playerShip = new Entity();
-
-        context(playerShip).add(EntityEnum.class, PLAYER);
+        context(playerShip).add(EntityType.class, PLAYER);
+        context(playerShip).add(Health.class, new Health(5));
+        context(playerShip).add(BehaviourEnum.class, NA);
         context(playerShip).add(View.class, new View("images/Ship.png"));
         context(playerShip).add(Position.class, new Position(360, 280));
         context(playerShip).add(Rotation.class, new Rotation());
         context(playerShip).add(Velocity.class, new Velocity());
         context(playerShip).add(Scale.class, new Scale());
-        context(playerShip).add(Radius.class, new Radius(5));
+        context(playerShip).add(Radius.class, new Radius(10));
 
         return playerShip;
     }

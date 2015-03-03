@@ -1,15 +1,15 @@
 package dk.sdu.mmmi.cbse.project3.java;
 
+import dk.sdu.mmmi.cbse.project3.core.AsteroidsGame;
 import playn.core.PlayN;
 import playn.java.JavaPlatform;
-import dk.sdu.mmmi.cbse.project3.core.AsteroidsGame;
 
 public class AsteroidsGameJava {
 
-  public static void main(String[] args) {
-    JavaPlatform.Config config = new JavaPlatform.Config();
-    // use config to customize the Java platform, if needed
-    JavaPlatform.register(config);
-    PlayN.run(new AsteroidsGame());
-  }
+    public static void main(String[] args) {
+        JavaPlatform.Config config = new JavaPlatform.Config();
+        // use config to customize the Java platform, if needed
+        JavaPlatform.register(config);
+        PlayN.run(new AsteroidsGame());
+    }
 }

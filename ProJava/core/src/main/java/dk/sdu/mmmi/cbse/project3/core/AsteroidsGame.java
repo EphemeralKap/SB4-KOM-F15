@@ -3,9 +3,11 @@ package dk.sdu.mmmi.cbse.project3.core;
 import com.decouplink.DisposableList;
 import static com.decouplink.Utilities.context;
 import dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum;
+import static dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum.MOVE_DOWN;
+import static dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum.MOVE_UP;
 import dk.sdu.mmmi.cbse.project3.common.data.Entity;
-import dk.sdu.mmmi.cbse.project3.common.data.EntityEnum;
-import static dk.sdu.mmmi.cbse.project3.common.data.EntityEnum.PLAYER;
+import dk.sdu.mmmi.cbse.project3.common.data.EntityType;
+import static dk.sdu.mmmi.cbse.project3.common.data.EntityType.PLAYER;
 import dk.sdu.mmmi.cbse.project3.common.data.GameTime;
 import dk.sdu.mmmi.cbse.project3.common.data.Position;
 import dk.sdu.mmmi.cbse.project3.common.data.Rotation;
@@ -50,7 +52,7 @@ public class AsteroidsGame extends Game.Default {
         PlayN.keyboard().setListener(keyboardListener);
 
         for (Entity entity : context(world).all(Entity.class)) {
-            if (context(entity).one(EntityEnum.class) == PLAYER) {
+            if (context(entity).one(EntityType.class) == PLAYER) {
                 this.player = entity;
             }
         }
@@ -101,7 +103,7 @@ public class AsteroidsGame extends Game.Default {
 
             if (e.isDestroyed()) {
                 layer.remove(view);
-                e.dipose();
+                context(world).remove(e);
             }
         }
     }
@@ -139,11 +141,11 @@ public class AsteroidsGame extends Game.Default {
         public void onKeyDown(Keyboard.Event event) {
             switch (event.key()) {
                 case W:
-                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_UP));
+                    disposables.add(context(player).add(BehaviourEnum.class, MOVE_UP));
                     break;
 
                 case S:
-                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.MOVE_DOWN));
+                    disposables.add(context(player).add(BehaviourEnum.class, MOVE_DOWN));
                     break;
 
                 case A:
@@ -155,7 +157,7 @@ public class AsteroidsGame extends Game.Default {
                     break;
 
                 case SPACE:
-                    disposables.add(context(player).add(BehaviourEnum.class, BehaviourEnum.SHOOT));
+                    context(player).add(BehaviourEnum.class, BehaviourEnum.SHOOT);
                     break;
 
                 default:
@@ -170,7 +172,6 @@ public class AsteroidsGame extends Game.Default {
         @Override
         public void onKeyUp(Keyboard.Event event) {
             disposables.dispose();
-
         }
     };
 

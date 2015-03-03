@@ -47,4 +47,6 @@ public interface Context {
      * Lookup.lookupAll(..).
      */
     <T> Collection<? extends T> all(Class<T> clazz);
+
+    <T> boolean remove(T value);
 }

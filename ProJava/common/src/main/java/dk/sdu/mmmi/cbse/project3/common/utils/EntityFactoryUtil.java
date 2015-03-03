@@ -1,9 +1,11 @@
 package dk.sdu.mmmi.cbse.project3.common.utils;
 
 import static com.decouplink.Utilities.context;
+import dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum;
+import static dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum.DIRECTED;
 import dk.sdu.mmmi.cbse.project3.common.data.Entity;
-import dk.sdu.mmmi.cbse.project3.common.data.EntityEnum;
-import static dk.sdu.mmmi.cbse.project3.common.data.EntityEnum.BULLET;
+import dk.sdu.mmmi.cbse.project3.common.data.EntityType;
+import static dk.sdu.mmmi.cbse.project3.common.data.EntityType.BULLET;
 import dk.sdu.mmmi.cbse.project3.common.data.Expires;
 import dk.sdu.mmmi.cbse.project3.common.data.Position;
 import dk.sdu.mmmi.cbse.project3.common.data.Radius;
@@ -31,7 +33,8 @@ public class EntityFactoryUtil {
         float y = p.y + (float) (c * sin(r.angle));
 
         Entity bullet = new Entity();
-        context(bullet).add(EntityEnum.class, BULLET);
+        context(bullet).add(EntityType.class, BULLET);
+        context(bullet).add(BehaviourEnum.class, DIRECTED);
         context(bullet).add(View.class, new View("images/Bullet.png"));
         context(bullet).add(Position.class, new Position(x, y));
         context(bullet).add(Rotation.class, new Rotation(r.angle));

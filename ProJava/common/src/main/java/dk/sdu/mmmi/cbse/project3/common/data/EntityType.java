@@ -4,7 +4,7 @@ package dk.sdu.mmmi.cbse.project3.common.data;
  *
  * @author jcs
  */
-public enum EntityEnum {
+public enum EntityType {
 
-    ENEMY, PLAYER, ASTEROID, BULLET;
+    PLAYER, ENEMY, BULLET, ASTEROIDS;
 }

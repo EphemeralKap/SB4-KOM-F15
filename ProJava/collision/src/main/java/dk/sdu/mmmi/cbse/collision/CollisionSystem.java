@@ -1,14 +1,12 @@
 package dk.sdu.mmmi.cbse.collision;
 
-import com.decouplink.DisposableList;
 import static com.decouplink.Utilities.context;
 import dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum;
+import static dk.sdu.mmmi.cbse.project3.common.data.BehaviourEnum.HIT;
 import dk.sdu.mmmi.cbse.project3.common.data.Entity;
 import dk.sdu.mmmi.cbse.project3.common.data.Position;
 import dk.sdu.mmmi.cbse.project3.common.data.Radius;
 import dk.sdu.mmmi.cbse.project3.common.services.IEntityProcessingService;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
@@ -16,17 +14,12 @@ import java.util.List;
  */
 public class CollisionSystem implements IEntityProcessingService {
 
-    DisposableList disposables = new DisposableList();
-
     @Override
     public void process(Object world, Entity source) {
 
-        List<Entity> entities = new ArrayList<Entity>(context(world).all(Entity.class));
-        disposables.dispose();
-
-        for (Entity target : entities) {
+        for (Entity target : context(world).all(Entity.class)) {
             if (!(source.equals(target)) && testCollision(source, target)) {
-                disposables.add(context(target).add(BehaviourEnum.class, BehaviourEnum.HIT));
+                context(target).add(BehaviourEnum.class, HIT);
             }
         }
     }

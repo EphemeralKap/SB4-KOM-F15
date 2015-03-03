@@ -17,7 +17,6 @@ public class EntityPlugin implements IGamePluginService {
         // Add entities to the world
         Entity e = createEnemyShip();
         Link<Entity> el = context(world).add(Entity.class, e);
-        e.setDisposable(el);
         entities.add(el);
     }
 
