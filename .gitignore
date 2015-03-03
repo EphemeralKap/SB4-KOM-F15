@@ -107,3 +107,7 @@ ProJava/enemy/src/main/resources/rebel.xml
 ProJava/core/src/main/resources/rebel.xml
 
 ProJava/com.decouplink/src/main/resources/rebel.xml
+
+ProNetbeans/rebel.xml
+
+ProNetbeans/branding/rebel.xml
