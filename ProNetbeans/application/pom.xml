@@ -19,7 +19,10 @@
         <netbeans.run.params.ide/>
         <!--        -Dnetbeans.logger.console=true-->
         <!--        -J-XX:MaxPermSize=256m -J-Xmx512m -->
-        <netbeans.run.params>${netbeans.run.params.ide} --nosplash</netbeans.run.params>
+        <!--        -J-Dplugin.manager.check.interval=1 -J-Dorg.netbeans.modules.autoupdate.level=FINEST -J-Dnetbeans.logger.console=true-->
+        <netbeans.run.params>${netbeans.run.params.ide} --nosplash -J-Dplugin.manager.check.interval=1</netbeans.run.params>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
 
@@ -35,55 +38,89 @@
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-modules-nbjunit</artifactId>
             <version>${netbeans.version}</version>
-            <scope>test</scope> <!-- beyond platform cluster, this often needs to be dropped down to compile/runtime, some other modules in IDE clusters depend on it -->
+            <scope>test</scope> <!-- beyond platform cluster, this often needs to be dropped down to compile/runtime, some other modules i  n IDE clusters depend on it -->
         </dependency>
         <!-- To use Jelly Tools in your functional tests, add or replace with:        -->
-        <!--        <dependency>
+        <!--    <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-modules-jellytools-platform</artifactId>
             <version>${netbeans.version}</version>
             <scope>test</scope>
         </dependency>-->
+
         <dependency>
-            <artifactId>org-netbeans-bootstrap</artifactId>
             <groupId>org.netbeans.modules</groupId>
-            <type>nbm-file</type>
-            <version>${netbeans.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.netbeans.api</groupId>
-            <artifactId>org-openide-util-lookup</artifactId>
-            <type>nbm-file</type>
-            <version>${netbeans.version}</version>
-        </dependency>
-        <dependency>
-            <artifactId>org-openide-filesystems</artifactId>
-            <groupId>org.netbeans.api</groupId>
-            <type>nbm-file</type>
-            <version>${netbeans.version}</version>
-        </dependency>
-        <dependency>
             <artifactId>org-netbeans-core-startup</artifactId>
+            <version>${netbeans.version}</version>
+            <type>jar</type>
+        </dependency>
+
+        <!--        <dependency>
             <groupId>org.netbeans.modules</groupId>
-            <type>nbm-file</type>
+            <artifactId>org-netbeans-core-windows</artifactId>
             <version>${netbeans.version}</version>
-        </dependency>
-        <dependency>
-            <artifactId>org-openide-modules</artifactId>
-            <groupId>org.netbeans.api</groupId>
-            <type>nbm-file</type>
+        </dependency>-->
+        <!--        <dependency>
+            <groupId>org.netbeans.modules</groupId>
+            <artifactId>org-netbeans-core-ui</artifactId>
             <version>${netbeans.version}</version>
-        </dependency>
-        <dependency>
-            <artifactId>org-openide-util</artifactId>
-            <groupId>org.netbeans.api</groupId>
-            <type>nbm-file</type>
-            <version>${netbeans.version}</version>
-        </dependency>
+            <type>jar</type>
+        </dependency>-->
 
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>pronetbeans-branding</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!--        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>Collision</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>Enemy</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>Expiration</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>Move</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>Player</artifactId>
+            <version>${project.version}</version>
+        </dependency>-->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>Assets</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>Common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.decouplink</groupId>
+            <artifactId>decouplink</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>Core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>SilentUpdate</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
@@ -128,8 +165,8 @@
                                 <id>extra</id>
                                 <goals>
                                     <goal>autoupdate</goal>
-                                    <goal>webstart-app</goal>
-                                    <goal>build-installers</goal>
+                                    <!--                                    <goal>webstart-app</goal>
+                                    <goal>build-installers</goal>-->
                                 </goals>
                             </execution>
                         </executions>

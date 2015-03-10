@@ -111,3 +111,16 @@ ProJava/com.decouplink/src/main/resources/rebel.xml
 ProNetbeans/rebel.xml
 
 ProNetbeans/branding/rebel.xml
+/ProNetbeans/application/target/
+/ProNetbeans/target/
+ProNetbeans/application/.jrebel_disabled
+
+ProNetbeans/Assets/.jrebel_disabled
+
+ProNetbeans/Collision/.jrebel_disabled
+
+ProNetbeans/Core/.jrebel_disabled
+
+ProNetbeans/Common/.jrebel_disabled
+
+ProNetbeans/SilentUpdate/.jrebel_disabled
