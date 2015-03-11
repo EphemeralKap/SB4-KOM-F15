@@ -124,3 +124,12 @@ ProNetbeans/Core/.jrebel_disabled
 ProNetbeans/Common/.jrebel_disabled
 
 ProNetbeans/SilentUpdate/.jrebel_disabled
+/ProJava/collision/target/
+/ProJava/player/target/
+/ProJava/expiration/target/
+/ProJava/move/target/
+/ProNetbeans/SilentUpdate/target/
+/ProNetbeans/Player/target/
+ProJava/rebel.xml
+
+ProNetbeans/Player/.jrebel_disabled

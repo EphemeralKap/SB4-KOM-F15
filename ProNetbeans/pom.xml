@@ -107,6 +107,7 @@
         <module>com.decouplink</module>
         <module>Assets</module>
         <module>SilentUpdate</module>
+        <module>Player</module>
     </modules>
 
     <properties>
